@@ -1,12 +1,12 @@
 {
   "name": "semanti",
   "main": "semanti.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/websemantics/semanti",
   "authors": [
     "Adnan <adnan@websemantics.ca>"
   ],
-  "description": "Show your Github repositories stats in style using Semantic UI labeled buttons.",
+  "description": "Display your Github repositories stats in style using Semantic-ui labeled buttons",
   "keywords": [
     "semantic-ui",
     "github",
@@ -17,8 +17,13 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "demo/lib",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "semantic-ui": "*",
+    "codemirror": "*",
+    "semanti": "*"
+  }
 }

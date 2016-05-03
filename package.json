@@ -1,7 +1,7 @@
 {
   "name": "semanti",
-  "version": "0.2.0",
-  "description": "Show your Github repositories stats in style using Semantic UI labeled buttons.",
+  "version": "0.1.1",
+  "description": "Display your Github repositories stats in style using Semantic-ui labeled buttons.",
   "main": "semanti.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
