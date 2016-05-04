@@ -23,7 +23,7 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link href='http://fonts.googleapis.com/css?family=Roboto:700,400,300' rel='stylesheet' type='text/css'>
-<!-- <link rel="stylesheet" type="text/css" href="lib/semantic-ui/dist/semantic.min.css"> -->
+<link rel="stylesheet" type="text/css" href="lib/semantic-ui/dist/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="lib/codemirror/lib/codemirror.css">
 <link rel="stylesheet" type="text/css" href="lib/codemirror/theme/mdn-like.css">
 <link rel="stylesheet" type="text/css" href="css/buttons.css">
@@ -237,156 +237,34 @@ code.custom {
 
       <h1 class="title-m">How To</h1>
 
-      <p>1- Install <a href="http://semantic-ui.com/">Semantic-ui</a> and <a href="https://github.com/websemantics/Semanti">Semanti</a> library using Bower. This will also install <a href="https://jquery.com/">jQuery</a>.</p>
+      <p>1- Include the following in your page.</p>
 
-      <code class="custom cm-s-mdn-like"><span style="color: #690;">Bower</span> install semantic-ui
-<span style="color: #690;">Bower</span> install semanti</code>
+      <code class="xml cm-s-mdn-like">&lt;script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.0/bragit.js"&gt;&lt;/script&gt;</code>
 
-<p>2- Include the required Javascript / CSS files in the HTML page and initilize <code>Semanti</code> with Github <strong>username</strong> and <strong>repository name</strong>.</p>
+      <p>2- Insert a labled button as specified in <a href="http://semantic-ui.com/elements/button.html#labeled">Semantic-ui documentation</a> and add a class name for the Github button you desire. For example, to show the stars buttons of Bragit repository the class would be <code>github-websemantics-bragit-stars</code></p>
 
-<code class="htmlmixed cm-s-mdn-like">&lt;link href="bower_components/semantic-ui/dist/semantic.min.css" type="text/css" rel="stylesheet"&gt;
-&lt;script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script src="bower_components/semanti/semanti.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-  $(function() {
-    Semanti.init(/* Github username */ 'websemantics', /* Github repo */ 'semanti');
-  });
-&lt;/script&gt;</code>
+      <code class="htmlmixed cm-s-mdn-like"><a class="ui labeled tiny button github-websemantics-bragit-stars">
+        <div class="ui brand tiny button">
+          <i class="star icon"></i> Stars
+        </div>
+        <div class="ui basic brand left pointing label">
+          <i class="spinner loading icon"></i>
+        </div>
+      </a></code>
 
-      <p>3- Use <a href="http://semantic-ui.com/elements/button.html#labeled">Semantic-ui labeled buttons</a> anywhere in your page. Here's an example of the famous Github <code class="highlighter-rouge">stars</code> button.</p>
+      <p>3- That's it! The result is shown below.</p>
 
-              <a class="ui labeled tiny button semanti stars">
-                <div class="ui primary tiny button">
-                  <i class="star icon"></i> Stars
-                </div>
-                <div class="ui basic primary left pointing label">
-                  <i class="spinner loading icon"></i>
-                </div>
-              </a>
-
-
-            <code class="xml cm-s-mdn-like"><div>
-  <a class="ui labeled tiny button semanti stars">
-    <div class="ui primary tiny button">
-      <i class="star icon"></i> Stars
-    </div>
-    <div class="ui basic primary left pointing label">
-      <i class="spinner loading icon"></i>
-    </div>
-  </a>
-</div></code>
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-<p>Use css class 'semanti' in combination with stars, forks, watchers, issues, download or contributors to speicify the information the button provides.</p>
-
-      <div>
-        <a class="ui labeled tiny button semanti stars">
-          <div class="ui primary tiny button">
-            <i class="star icon"></i> Stars
-          </div>
-          <div class="ui basic primary left pointing label">
-            <i class="spinner loading icon"></i>
-          </div>
-        </a>
-        <a class="ui left labeled tiny button semanti forks">
-          <div class="ui basic primary right pointing label">
-            <i class="spinner loading icon"></i>
-          </div>
-          <div class="ui primary tiny button">
-            <i class="fork icon"></i> Forks
-          </div>
-        </a>
-        <a class="ui labeled tiny button semanti watchers">
-          <div class="ui primary tiny button">
-            <i class="eye icon"></i> Watchers
-          </div>
-          <div class="ui basic primary left pointing label">
-            <i class="spinner loading icon"></i>
-          </div>
-        </a>
-        <a class="ui labeled tiny button semanti issues">
-          <div class="ui primary tiny button">
-            <i class="info circle icon"></i> Issues
-          </div>
-          <div class="ui basic primary left pointing label">
-            <i class="spinner loading icon"></i>
-          </div>
-        </a>
-        <a class="ui tiny primary button semanti download">
-            <i class="download icon"></i> Download
-        </a>
-        <a class="ui tiny primary button semanti contributors">
-            <i class="users icon"></i> Contributors
-        </a>
-      </div>
-
-      <p>Use css class 'semanti' in combination with stars, forks, watchers, issues, download or contributors to speicify the information the button provides.</p>
-
-      <div class="xml"><div>
-  <a class="ui labeled tiny button semanti stars">
-    <div class="ui primary tiny button">
-      <i class="star icon"></i> Stars
-    </div>
-    <div class="ui basic primary left pointing label">
-      <i class="spinner loading icon"></i>
-    </div>
-  </a>
-  <a class="ui left labeled tiny button semanti forks">
-    <div class="ui basic primary right pointing label">
-      <i class="spinner loading icon"></i>
-    </div>
-    <div class="ui primary tiny button">
-      <i class="fork icon"></i> Forks
-    </div>
-  </a>
-  <a class="ui labeled tiny button semanti watchers">
-    <div class="ui primary tiny button">
-      <i class="eye icon"></i> Watchers
-    </div>
-    <div class="ui basic primary left pointing label">
-      <i class="spinner loading icon"></i>
-    </div>
-  </a>
-  <a class="ui labeled tiny button semanti issues">
-    <div class="ui primary tiny button">
-      <i class="info circle icon"></i> Issues
-    </div>
-    <div class="ui basic primary left pointing label">
-      <i class="spinner loading icon"></i>
-    </div>
-  </a>
-  <a class="ui tiny primary button semanti download">
-      <i class="download icon"></i> Download
-  </a>
-  <a class="ui tiny primary button semanti contributors">
-      <i class="users icon"></i> Contributors
-  </a>
-</div></div>
-
-
-
-
-
-
+      <a class="ui labeled tiny button github-websemantics-bragit-stars">
+        <div class="ui primary tiny button">
+          <i class="star icon"></i> Stars
+        </div>
+        <div class="ui basic primary left pointing label">
+          <i class="spinner loading icon"></i>
+        </div>
+      </a>
 
     </div>
-
-
-
-
 	</div>
-
   <div class="ui footer">
 	    <div class="ui container">
         <table class="center">
@@ -409,7 +287,7 @@ code.custom {
   <script src="lib/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
   <script src="lib/codemirror/mode/shell/shell.js" type="text/javascript"></script>
   <script src="lib/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
-  <script type="text/javascript" src="https://rawgit.com/websemantics/bragit/master/bragit.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.0/bragit.js"></script>
   <script type="text/javascript">
     $(function() {
       ['code.shell', 'code.javascript', 'code.xml', 'code.htmlmixed'].forEach(function(cls){
