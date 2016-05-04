@@ -22,7 +22,7 @@
 }(this, function ($) {
   var root = this || global
   var doc = root.document
-  var me = {VERSION: '0.1.2'}
+  var me = {VERSION: '0.1.0'}
   var debug = false
   var base_uri = 'https://api.github.com/repos/'
   var semantic = ['semantic.min.css', 'semantic.css']

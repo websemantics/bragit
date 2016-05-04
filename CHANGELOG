@@ -1,18 +1,5 @@
-0.1.2
+0.1.0
   date: 2016-05-04
   changes:
-  - Change name from semanti to Bragit
-  - Add logo and icons
-
-0.1.1
-  date: 2016-05-03
-  changes:
-  - Major code refactoring
-  - Support to change default setting
-  - Use css class conventions to pull Github repo data
-  - No need to initialize
-
-0.1.0
-  date: 2016-05-02
-  changes:
   - Supports for Stars, Forks, Watchers, Issues, Download and Contributors buttons
+  - Use css class conventions to pull Github repo data
