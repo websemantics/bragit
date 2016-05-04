@@ -23,7 +23,6 @@
   ],
   "devDependencies": {
     "semantic-ui": "*",
-    "codemirror": "*",
-    "bragit": "*"
+    "codemirror": "*"
   }
 }
