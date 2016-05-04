@@ -102,20 +102,23 @@
 
   me.init = function () {
 
-    /* inject semantic-ui styles, if required */
-    var inject = defaults.css.inject;
+    /* check if semantic-ui styles are loaded */
+    var loaded = false
+    var href   = null;
 
-// semantic.min.css
+    for(var i in doc.styleSheets){
+      if(href = doc.styleSheets[i].href ? doc.styleSheets[i].href : null){
+        var filename = href.substring(href.lastIndexOf('/') + 1, href.length);
+        if(semantic.indexOf(filename) > -1 ){
+          loaded = true;
+          break;
+        }
+      }
+    }
 
     /* if semantic-ui css file is not loaded, set inject to true if not already */
-    // for(var s in doc.styleSheets){
-    //   var sheet = doc.styleSheets[s];
-    //   inject = inject || (sheet && sheet.href > '') ? sheet.indexOf('')
-    // }
-    //
-
-
-    if(inject){
+    if(!loaded || defaults.css.inject){
+      log('Injecting semantic-ui buttons ...')
       for(var i in defaults.css.modules){
         $('head').append('<link rel="stylesheet" href="'
                 + compile(defaults.css.uri, {version: defaults.css.version,module: defaults.css.modules[i]})
