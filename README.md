@@ -1,9 +1,9 @@
 ```
- ___ ___  _   ___ ___ _____
-| _ ) _ \/_\ / __|_ _|_   _|
-| _ \   / _ \ (_ || |  | |  
-|___/_|_\/ \_\___|___| |_|  
-Show it off ...   
+ ___ ___  _    ___ ___ _____
+| _ ) _ \/_\ /  __|_ _|_   _|
+| _ \   / _ \| (_ || |  | |  
+|___/_|_\/ \ \\___|___| |_|
+            \_\ Show it off
 ```
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/websemantics/semanti/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/websemantics/semanti.svg)](https://github.com/websemantics/semanti/network) [![GitHub stars](https://img.shields.io/github/stars/websemantics/semanti.svg)](https://github.com/websemantics/semanti/stargazers)
