@@ -1,11 +1,9 @@
 ```
-  _____                            _   _
- / ____|                          | | (_)
-| (___   ___ _ __ ___   __ _ _ __ | |_ _
- \___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |
- ____) |  __/ | | | | | (_| | | | | |_| |
-|_____/ \___|_| |_| |_|\__,_|_| |_|\__|_|
-  Stylish Github Buttons ...             
+ ___ ___  _   ___ ___ _____
+| _ ) _ \/_\ / __|_ _|_   _|
+| _ \   / _ \ (_ || |  | |  
+|___/_|_\/ \_\___|___| |_|  
+Show it off ...   
 ```
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/websemantics/semanti/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/websemantics/semanti.svg)](https://github.com/websemantics/semanti/network) [![GitHub stars](https://img.shields.io/github/stars/websemantics/semanti.svg)](https://github.com/websemantics/semanti/stargazers)
@@ -15,20 +13,20 @@
 
 > Working with [Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) to represent Github buttons (Stars, Forks, Watchers, Issues, Download and Contributors), this jQuery library requests a Github repository information and updates the associated buttons accordingly.
 
-#### Try [Demo](http://websemantics.github.io/semanti/)
+#### Try [Demo](http://websemantics.github.io/bragit/)
 
 ## Install
 
 1- Bower
 
 ```
-Bower install semanti
+Bower install bragit
 ```
 
 2- NPM
 
 ```
-npm install semanti
+npm install bragit
 ```
 
 ## License
