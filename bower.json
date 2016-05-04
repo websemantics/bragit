@@ -1,12 +1,12 @@
 {
-  "name": "semanti",
-  "main": "semanti.js",
-  "version": "0.1.1",
-  "homepage": "https://github.com/websemantics/semanti",
+  "name": "bragit",
+  "main": "bragit.js",
+  "version": "0.1.2",
+  "homepage": "https://github.com/websemantics/bragit",
   "authors": [
     "Adnan <adnan@websemantics.ca>"
   ],
-  "description": "Display your Github repositories stats in style using Semantic-ui labeled buttons",
+  "description": "Show off your Github repository buttons with elegance.",
   "keywords": [
     "semantic-ui",
     "github",
@@ -24,6 +24,6 @@
   "devDependencies": {
     "semantic-ui": "*",
     "codemirror": "*",
-    "semanti": "*"
+    "bragit": "*"
   }
 }

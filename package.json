@@ -1,14 +1,14 @@
 {
-  "name": "semanti",
-  "version": "0.1.1",
-  "description": "Display your Github repositories stats in style using Semantic-ui labeled buttons.",
-  "main": "semanti.js",
+  "name": "bragit",
+  "version": "0.1.2",
+  "description": "Show off your Github repository buttons with elegance.",
+  "main": "bragit.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/websemantics/semanti.git"
+    "url": "git+https://github.com/websemantics/bragit.git"
   },
   "keywords": [
     "semantic-ui",
@@ -22,10 +22,10 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/websemantics/semanti/issues"
+    "url": "https://github.com/websemantics/bragit/issues"
   },
   "dependencies": {
     "jquery": "*"
   },
-  "homepage": "https://github.com/websemantics/semanti#readme"
+  "homepage": "https://github.com/websemantics/bragit#readme"
 }
