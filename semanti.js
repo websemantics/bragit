@@ -34,6 +34,14 @@
                         is used to modify the link element while the 'property' name is used to
                         access the information returned for the repository (for example,
                         stargazers_count will give a number of repo stars)
+
+    - css (object), contains information about css styles to be injected into the document at run-time
+    * version (string), semantic-ui version
+    * inject (boolean), if true, inject semantic-ui styles
+    * uri (string), uri template for the cdn used
+    * modules (array), list of semantic-ui components
+    * custom (string), any custom css styles if css has been injected
+
   */
 
   var defaults = {
@@ -58,6 +66,13 @@
         uri: '/contributors',
         property: null
       }
+    },
+    css: {
+      version: '2.1.8',
+      inject: true,
+      uri: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/{{version}}/components/{{module}}.min.css',
+      modules: ['button', 'icon', 'label'],
+      custom : ''
     }
   }
 
@@ -90,6 +105,17 @@
   */
 
   me.init = function () {
+    var css = defaults.css;
+
+    /* inject semantic-ui styles */
+    if(defaults.css.inject){
+      for(var i in defaults.css.modules){
+        $('head').append('<link rel="stylesheet" href="'
+                + compile(defaults.css.uri, {version: defaults.css.version,module: defaults.css.modules[i]})
+                + '" type="text/css" />');
+      }
+    }
+
     /* an associative array of all github repos used in the doc  */
     var repos = { /* username-repo : { username: name, repo : repo } */ }
 
@@ -142,6 +168,22 @@
         cb.call(null, repo, xhr.responseJSON)
       }
     })
+  }
+
+  /*
+    Compile template, replace placeholder with their values
+
+      Parameters:
+      - template (string): string with placeholders, i.e. 'Hello {{name}}'
+      - data (object): key/value pairs, i.e. {name: 'World'}
+
+  */
+
+  function compile (template, data) {
+    for (var name in data) {
+      template = template.replace('{{'+name+'}}', data[name])
+    }
+    return template
   }
 
   if (typeof $ === 'undefined') {
