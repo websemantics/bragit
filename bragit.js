@@ -20,10 +20,10 @@
     root.Bragit = factory(root.jQuery)
   }
 }(this, function ($) {
-  var root     = this || global
-  var doc      = root.document
-  var me       = {VERSION: '0.1.1'}
-  var debug    = false;
+  var root = this || global
+  var doc = root.document
+  var me = {VERSION: '0.1.1'}
+  var debug = false
   var base_uri = 'https://api.github.com/repos/'
   var semantic = ['semantic.min.css', 'semantic.css']
 
@@ -75,7 +75,7 @@
       inject: false,
       uri: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/{{version}}/components/{{module}}.min.css',
       modules: ['button', 'icon', 'label'],
-      custom : null
+      custom: null
     }
   }
 
@@ -91,7 +91,7 @@
   */
 
   me.defaults = function (opts) {
-    return $.extend( true, defaults, opts )
+    return $.extend(true, defaults, opts)
   }
 
   /*
@@ -101,32 +101,31 @@
   */
 
   me.init = function () {
-
     /* check if semantic-ui styles are loaded */
     var loaded = false
-    var href   = null;
+    var href = null
 
-    for(var i in doc.styleSheets){
-      if(href = doc.styleSheets[i].href ? doc.styleSheets[i].href : null){
-        var filename = href.substring(href.lastIndexOf('/') + 1, href.length);
-        if(semantic.indexOf(filename) > -1 ){
-          loaded = true;
-          break;
+    for (var i in doc.styleSheets) {
+      if (href = doc.styleSheets[i].href ? doc.styleSheets[i].href : null) {
+        var filename = href.substring(href.lastIndexOf('/') + 1, href.length)
+        if (semantic.indexOf(filename) > -1) {
+          loaded = true
+          break
         }
       }
     }
 
     /* if semantic-ui css file is not loaded, set inject to true if not already */
-    if(!loaded || defaults.css.inject){
+    if (!loaded || defaults.css.inject) {
       log('Injecting semantic-ui buttons ...')
-      for(var i in defaults.css.modules){
+      for (var i in defaults.css.modules) {
         $('head').append('<link rel="stylesheet" href="'
-                + compile(defaults.css.uri, {version: defaults.css.version,module: defaults.css.modules[i]})
-                + '" type="text/css" />');
+          + compile(defaults.css.uri, {version: defaults.css.version,module: defaults.css.modules[i]})
+          + '" type="text/css" />')
       }
       /* inject custom css, if provided */
-      if(defaults.css.custom){
-        $('head').append('<link rel="stylesheet" href="' + defaults.css.custom + '" type="text/css" />');
+      if (defaults.css.custom) {
+        $('head').append('<link rel="stylesheet" href="' + defaults.css.custom + '" type="text/css" />')
       }
     }
 
@@ -146,8 +145,8 @@
       var action = cls.slice(cls.indexOf(selector) , cls.length)
         .split(' ')[0].split(defaults.delimiter)
 
-        /* hide the element first
-        $('.'+action.join(defaults.delimiter)).attr('style','visibility:hidden'); */
+      /* hide the element first
+      $('.'+action.join(defaults.delimiter)).attr('style','visibility:hidden'); */
 
       /* if an action has at least three parts, github, username/repo add to list of repos */
       if (action.length > 2) {
@@ -159,7 +158,7 @@
        and make necessary changes to html code (update stats, urls), .. fun fun! */
     for (var i in repos) {
       get(repos[i], function (repo, data) {
-        if(data){
+        if (data) {
           for (var action in defaults.actions) {
             var cls = [defaults.cls, repo.username, repo.repo, action].join(defaults.delimiter)
             $('.' + cls).attr('href', data['html_url'] + defaults.actions[action].uri)
@@ -182,17 +181,17 @@
   */
 
   function get (repo, cb) {
-    try{
+    try {
       $.ajax({
         url: base_uri + repo.username + '/' + repo.repo,
         complete: function (xhr) {
           cb.call(null, repo, xhr.responseJSON)
         },
-        error: function(err){
-          log(( err && err.responseJSON ) ? err.responseJSON['message'] : 'There has been an error')
+        error: function (err) {
+          log((err && err.responseJSON) ? err.responseJSON['message'] : 'There has been an error')
         }
       })
-    } catch(err){
+    } catch(err) {
       log(err.message)
     }
   }
@@ -208,7 +207,7 @@
 
   function compile (template, data) {
     for (var name in data) {
-      template = template.replace('{{'+name+'}}', data[name])
+      template = template.replace('{{' + name + '}}', data[name])
     }
     return template
   }
@@ -222,15 +221,15 @@
   */
 
   function log (message) {
-    if(debug){
-      console.log(message);
+    if (debug) {
+      console.log(message)
     }
   }
 
   if (typeof $ === 'undefined') {
     console.error('Please install the latest jQuery!')
   } else {
-    $(function(){me.init()});
+    $(function () {me.init()})
   }
 
   return me
