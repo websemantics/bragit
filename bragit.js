@@ -1,5 +1,12 @@
 /**
- * Bragit : Display your Github repositories stats in style using Semantic-ui labeled buttons
+ *   ___ ___  _    ___ ___ _____
+ *  | _ ) _ \/_\ /  __|_ _|_   _|
+ *  | _ \   / _ \| (_ || |  | |
+ *  |___/_|_\/ \ \\___|___| |_|
+ *              \_\ Show it off
+ *
+ *                  Display your Github repositories stats in
+*                   style using Semantic-ui labeled buttons
  *
  * This project was released under MIT license.
  *
