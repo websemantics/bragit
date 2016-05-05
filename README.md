@@ -157,6 +157,8 @@ Semantic-ui [labeled buttons](http://semantic-ui.com/elements/button.html#labele
 All you need to do is to replace the main color `#756c74` and its lighter shade `#9d959c` to your own. Also notice how the `stars` icon has been colored golden. You can easily change that or even the colors of the other icons (`fork` for forks, `eye` for watchers, `info circle` for issues, `download` for download and `users` for contributors). The following is the code to display all the supports Github actions by **Bragit**.
 
 ```
+<!-- ************************( Stars )********************************-->
+
 <a class="ui labeled tiny button github-websemantics-bragit-stars">
   <div class="ui brand tiny button">
     <i class="star icon"></i> Stars
@@ -165,6 +167,9 @@ All you need to do is to replace the main color `#756c74` and its lighter shade 
     <i class="spinner loading icon"></i>
   </div>
 </a>
+
+<!-- **********************( Forks )******************************-->
+
 <a class="ui left labeled tiny button github-websemantics-bragit-forks">
   <div class="ui basic brand right pointing label">
     <i class="spinner loading icon"></i>
@@ -173,6 +178,9 @@ All you need to do is to replace the main color `#756c74` and its lighter shade 
     <i class="fork icon"></i> Forks
   </div>
 </a>
+
+<!-- ***********************( Watchers )*******************************-->
+
 <a class="ui labeled tiny button github-websemantics-bragit-watchers">
   <div class="ui brand tiny button">
     <i class="eye icon"></i> Watchers
@@ -181,6 +189,9 @@ All you need to do is to replace the main color `#756c74` and its lighter shade 
     <i class="spinner loading icon"></i>
   </div>
 </a>
+
+<!-- ************************( Issues )********************************-->
+
 <a class="ui left labeled tiny button github-websemantics-bragit-issues">
   <div class="ui basic brand right pointing label">
     <i class="spinner loading icon"></i>
@@ -189,9 +200,15 @@ All you need to do is to replace the main color `#756c74` and its lighter shade 
     <i class="info circle icon"></i> Issues
   </div>
 </a>
+
+<!-- ************************( Download )********************************-->
+
 <a class="ui brand tiny button semanti github-websemantics-bragit-download">
     <i class="download icon"></i> Download
 </a>
+
+<!-- **********************( Contributors )******************************-->
+
 <a class="ui brand tiny button semanti github-websemantics-bragit-contributors">
     <i class="users icon"></i> Contributors
 </a>
