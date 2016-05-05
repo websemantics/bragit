@@ -53,7 +53,7 @@ An eforetless way to present Github stats buttons of your repositories while not
 </a>
 ```
 
-The above example shows the `stars` buttons of this repository `Bragit`. The class name constructed as `github-websemantics-bragit-stars`.
+The above example shows the `stars` buttons of this repository `Bragit`. The class name constructed as `github-websemantics-bragit-stars`. other classes for this repository would be, `github-websemantics-bragit-stars`, `github-websemantics-bragit-forks`, `github-websemantics-bragit-watchers`, `github-websemantics-bragit-issues`, `github-websemantics-bragit-download`
 
 ## License
 
