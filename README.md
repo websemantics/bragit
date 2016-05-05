@@ -128,7 +128,26 @@ If the use of [Bower](http://bower.io/) is prefered, one can either include **Br
  Bower install bragit
  ```
 
-## License
+ ## Projects using Bragit
+
+ - [Image Select](https://github.com/websemantics/Image-Select), jQuery library that provides image support for Single and Multi select HTML tags to be used with [Chosen](https://harvesthq.github.io/chosen/).
+
+ - [Semantic Dojo](https://github.com/websemantics/semantic-dojo), A responsive Dojo theme that harnesses the style awesomeness of [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled) framework.
+
+ - [Palette Genie](https://github.com/websemantics/palette-genie), Turns color values from an Image or PhotoShop ACO file into a list of named colors, lighter and darker shades, CSS classes and a beautiful style guide.
+
+ - [Vimeo Upload](https://github.com/websemantics/vimeo-upload), Upload Vimeo videos and update their metadata directly from the browser.
+
+ - [Boxed](https://github.com/websemantics/boxed), Lightweight Boilerplate Generator that does not require the Command-line Interface (CLI) to customize software addons and packages, for the Visually-oriented Developers.
+
+ - [Oea.svg](https://github.com/websemantics/oeasvg.com), A library for building SVG interactive web applications. It provides three packages: Java.js, Draw2D.svg and Swing.svg, that makes building SVG apps a breeze.
+
+ - [Browser.js](https://github.com/websemantics/Browser.js), An implementation of MathML, HTML and SVG Layout Manager and CSS Processor (i.e. Browser) in JavaScript.
+
+ - [Hotdraw.js](https://github.com/websemantics/Hotdraw.js), a port of JHotDraw version 5.1. It is based on Erich Gamma's JHotDraw, which is copyright 1996, 1997 by IFA Informatik and Erich Gamma.
+
+
+ ## License
 
 [MIT](LICENSE)
 Copyright (c) Web Semantics, Inc.
