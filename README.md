@@ -30,7 +30,7 @@ An eforetless way to present Github stats buttons of your repositories while not
 2- Insert a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled).
 
 ```
-<a class="ui labeled tiny button github-websemantics-bragit-stars">
+<a class="ui labeled tiny button">
   <div class="ui brand tiny button">
     <i class="star icon"></i> Stars
   </div>
