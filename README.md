@@ -154,6 +154,8 @@ For example, using `stargazers_count` as an index to the repository data will re
 }
 ```
 
+All you need to do is to replace the main color `#756c74` and its lighter shade `#9d959c` to your own. Also notice how the `stars` icon has been colored golden. You can easily change that or even color the other icons used (`fork` for forks, `eye` for watchers, `info circle` for issues, `download` for download and `users` for contributors).
+
 ## Using Bower
 
 If the use of [Bower](http://bower.io/) is prefered, one can either include **Bragit** in the `bower.json` file or install from the command line,
