@@ -17,7 +17,7 @@
 
 2- Add a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled).
 
-3- Add a custom class name for the Github button you desire following a basic convention **`github-{username}-{repo}-{action}`** where action **stars**, **forks**, **watchers**, **issues**, **download** and `contributors`.
+3- Add a custom class name for the Github button you desire following a basic convention **`github-{username}-{repo}-{action}`** where action can be, **stars**, **forks**, **watchers**, **issues**, **download** or **contributors**.
 
 ```
 <a class="ui labeled tiny button github-websemantics-bragit-stars">
