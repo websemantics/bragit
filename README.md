@@ -27,7 +27,7 @@ An eforetless way to present Github stats buttons of your repositories while not
 <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.0/bragit.js"></script>
 ```
 
-2- Insert a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled). Add a custom class name for the Github button you desire following a basic convention `github-{username}-{repo}-{action}` where action `stars`, `forks`, `watchers`, `issues`, `download` and `contributors`. For example, to show the `stars` buttons of this repository `Bragit`, the class name would be `github-websemantics-bragit-stars`.
+2- Insert a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled).
 
 ```
 <a class="ui labeled tiny button github-websemantics-bragit-stars">
@@ -39,6 +39,21 @@ An eforetless way to present Github stats buttons of your repositories while not
   </div>
 </a>
 ```
+
+3- Add a custom class name for the Github button you desire following a basic convention `github-{username}-{repo}-{action}` where action `stars`, `forks`, `watchers`, `issues`, `download` and `contributors`.
+
+```
+<a class="ui labeled tiny button github-websemantics-bragit-stars">
+  <div class="ui brand tiny button">
+    <i class="star icon"></i> Stars
+  </div>
+  <div class="ui basic brand left pointing label">
+    <i class="spinner loading icon"></i>
+  </div>
+</a>
+```
+
+The above example shows the `stars` buttons of this repository `Bragit`. The class name constructed as `github-websemantics-bragit-stars`.
 
 ## License
 
