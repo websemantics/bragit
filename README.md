@@ -81,7 +81,7 @@ However, should the need arise, this can be changed as follows,
 </script>
 ```
 
-By changing the delimiter to say `_` and the class name **cls** to `brag`, the class name for the `stars` buttons of this repository will be `brag_websemantics_bragit_stars`.
+By changing the delimiter to say `_` and the class name **cls** to `brag`, the class name for the `stars` button of this repository will be `brag_websemantics_bragit_stars`.
 
 #### Actions
 
