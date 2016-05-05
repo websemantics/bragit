@@ -154,7 +154,7 @@ Semantic-ui [labeled buttons](http://semantic-ui.com/elements/button.html#labele
 }
 ```
 
-All you need to do is to replace the main color `#756c74` and its lighter shade `#9d959c` to your own. Also notice how the `stars` icon has been colored golden. You can easily change that or even the colors of the other icons (`fork` for forks, `eye` for watchers, `info circle` for issues, `download` for download and `users` for contributors). The following is the code to display all the supports Github actions by Bragit.
+All you need to do is to replace the main color `#756c74` and its lighter shade `#9d959c` to your own. Also notice how the `stars` icon has been colored golden. You can easily change that or even the colors of the other icons (`fork` for forks, `eye` for watchers, `info circle` for issues, `download` for download and `users` for contributors). The following is the code to display all the supports Github actions by **Bragit**.
 
 ```
 <a class="ui labeled tiny button github-websemantics-bragit-stars">
