@@ -123,7 +123,37 @@ For example, using `stargazers_count` as an index to the repository data will re
 
 #### Custom style
 
-[Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size).
+[Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size). However we all need to customize styles to our needs sometimes. Here's a quick example of a new color named 'brand' which is used in this project, **Bragit**.
+
+```
+
+/* styles for github action buttons */
+.ui.brand.button, .ui.brand.buttons .button {
+    background-color: #756c74;
+    color: #fff!important;
+}
+
+.ui.brand.label {
+    color: #756c74!important;
+    border-color: #756c74!important;
+    background-color: #ffffff;
+}
+
+.ui.brand.button:focus, .ui.brand.buttons .button:focus,
+  .ui.brand.button:hover, .ui.brand.buttons .button:hover {
+    background-color: #9d959c;
+}
+
+.ui.brand.labels .label:focus, .ui.brand.label:focus,
+  .ui.brand.labels .label:hover, .ui.brand.label:hover {
+    color: #9d959c!important;
+    border-color: #9d959c!important;
+}
+
+.ui.labeled .ui.button .star.icon {
+  color: #F5CC7A!important;
+}
+```
 
 ## Using Bower
 
