@@ -9,7 +9,7 @@
 
 ## How To
 
-1- Include the following script line into your page.
+1- Include the following script in web page.
 
 ```
 <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.0/bragit.js"></script>
