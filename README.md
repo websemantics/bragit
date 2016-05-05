@@ -122,7 +122,7 @@ For example, using `stargazers_count` as an index to the repository data will re
 
 #### Using Bower
 
-If the use of Bower is prefered, one can either include **Bragit** in the `bower.json` file of install from the command line,
+If the use of [Bower](http://bower.io/) is prefered, one can either include **Bragit** in the `bower.json` file of install from the command line,
 
  ```
  Bower install bragit
