@@ -40,6 +40,29 @@ github-websemantics-bragit-issues
 github-websemantics-bragit-download
 ```
 
+## Behind the Scenes
+
+The library takes care of many things behind closed doors. For one thing, it makes sure that the buttons styles are loaded if the [Semantic-ui](http://semantic-ui.com/elements/button.html#labeled) framework was not detected in the loaded document.
+
+The code will automatically inject the css files that contain the styles of three `Semantic-ui` components `button`, `icon` and `label` using a public cnd `https://cdnjs.cloudflare.com/ajax/libs/semantic-ui`
+
+This can be overriden if required as follows
+
+```
+<script type="text/javascript">
+  Bragit.defaults({ css: {
+    version: '2.1.8',
+    inject: false,
+    uri: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/{{version}}/components/{{module}}.min.css',
+    modules: ['button', 'icon', 'label'],
+    custom: null
+    }});
+</script>
+```
+
+Notice the `inject` flag which is responsible to force the injection of the specified components styles if set to `true`. Other modules can be added to the list of auto-loaded components and or a custom css styles by setting the `custom` attribute `custom: "css/styles.css"`
+
+
 ## License
 
 [MIT](LICENSE)
