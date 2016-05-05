@@ -224,7 +224,7 @@ Bower install bragit
 
 ## Bragit in the Wild
 
-Here a list of awesome projects (ahem) that used **Bragit**, .. let's all applaud.
+Here a list of awesome projects (ahem) that used **Bragit**, .. let's all applaud, right.
 
 * [Image Select](https://github.com/websemantics/Image-Select), jQuery library that provides image support for Single and Multi select HTML tags to be used with [Chosen](https://harvesthq.github.io/chosen/).
 
