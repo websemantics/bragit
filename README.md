@@ -224,6 +224,8 @@ Bower install bragit
 
 ## Bragit in the Wild
 
+Here a list of awesome projects (ahem) that used **Bragit**, .. let's all applaud.
+
 * [Image Select](https://github.com/websemantics/Image-Select), jQuery library that provides image support for Single and Multi select HTML tags to be used with [Chosen](https://harvesthq.github.io/chosen/).
 
 * [Semantic Dojo](https://github.com/websemantics/semantic-dojo), A responsive Dojo theme that harnesses the style awesomeness of [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled) framework.
