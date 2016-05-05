@@ -12,7 +12,7 @@
 |___/_|_\/ \ \\___|___| |_|
             \_\ Show it off
 ```
-#### Now, go on, [Try it](http://websemantics.github.io/bragit/)
+#### Go on .. [Try it](http://websemantics.github.io/bragit/)
 
 ## What is it
 
