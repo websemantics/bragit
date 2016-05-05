@@ -116,13 +116,13 @@ By changing the delimiter to say `_` and the class name **cls** to `brag`, the c
 
 </script>
 ```
-Notice how each action has two attributes, a `uri` and a `property` name. Bragit appends the `uri` value to the repository `html_url` retrieved from Github. This then will be used to set the `href` value of the labeled button link element `a`. The `property` name is used to access a named attribute of the repository information returned from Github.
+Notice how each action has two attributes, a `uri` and a `property` name. **Bragit** appends the `uri` value to the repository `html_url` retrieved from Github. This then will be used to set the `href` value of the labeled button link element `a`. The `property` name is used to access a named attribute of the repository information returned from Github.
 
 For example, using `stargazers_count` as an index to the repository data will return an number value. This number/text is then used to update the label element of the associated button. And that's how the magic happens, ladies and gents.
 
 #### Using Bower
 
-If you prefer to use Bower, there is good news for you. Bower is supported out-of-the-box. Either incluce Bragit in your `bower.json` file of install from the command line,
+If you prefer to use Bower, there is good news for you. Bower is supported out-of-the-box. Either incluce **Bragit** in your `bower.json` file of install from the command line,
 
  ```
  Bower install bragit
