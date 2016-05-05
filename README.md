@@ -123,10 +123,9 @@ For example, using `stargazers_count` as an index to the repository data will re
 
 #### Custom style
 
-[Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size). However we all need to customize styles to our needs sometimes. Here's a quick example of a new color named 'brand' which is used in this project, **Bragit**.
+[Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size). However we all need to customize styles to our needs sometimes. Here's a quick example of a new color named `brand` which is used in this project, **Bragit**.
 
 ```
-
 /* styles for github action buttons */
 .ui.brand.button, .ui.brand.buttons .button {
     background-color: #756c74;
