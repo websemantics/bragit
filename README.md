@@ -40,7 +40,7 @@ An eforetless way to present Github stats buttons of your repositories while not
 </a>
 ```
 
-3- Add a custom class name for the Github button you desire following a basic convention `github-{username}-{repo}-{action}` where action `stars`, `forks`, `watchers`, `issues`, `download` and `contributors`.
+3- Add a custom class name for the Github button you desire following a basic convention **`github-{username}-{repo}-{action}`** where action `stars`, `forks`, `watchers`, `issues`, `download` and `contributors`.
 
 ```
 <a class="ui labeled tiny button github-websemantics-bragit-stars">
