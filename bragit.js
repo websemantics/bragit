@@ -29,7 +29,7 @@
 }(this, function ($) {
   var root = this || global
   var doc = root.document
-  var me = {VERSION: '0.1.0'}
+  var me = {VERSION: '0.1.1'}
   var debug = false
   var base_uri = 'https://api.github.com/repos/'
   var semantic = ['semantic.min.css', 'semantic.css']
@@ -71,6 +71,9 @@
         property: 'open_issues_count'
       },download: {
         uri: '/archive/master.zip',
+        property: null
+      },github: {
+        uri: '',
         property: null
       },contributors: {
         uri: '/contributors',

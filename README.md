@@ -10,10 +10,10 @@
 
 ## How To
 
-1- Include the following script in a web page. Notice the release number `0.1.0` in the url; change as needed.
+1- Include the following script in a web page. Notice the release number `0.1.1` in the url; change as needed.
 
 ```
-<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.0/bragit.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.1/bragit.js"></script>
 ```
 
 2- Add a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled).
@@ -105,6 +105,9 @@ By changing the delimiter to say `_` and the class name **cls** to `brag`, the c
       },issues: {
         uri: '/issues',
         property: 'open_issues_count'
+      },github: {
+        uri: '',
+        property: null
       },download: {
         uri: '/archive/master.zip',
         property: null
