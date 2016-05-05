@@ -14,10 +14,6 @@
 ```
 #### Go on .. [Try it](http://websemantics.github.io/bragit/)
 
-## What is it
-
-An eforetless way to present Github stats buttons of your repositories while not compromise on style using the amazing Semantic-ui framework.
-
 ## How To
 
 1- Include the following script line into your page.
