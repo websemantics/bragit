@@ -30,7 +30,7 @@
 </a>
 ```
 
-The above example shows the `stars` buttons of this repository, **Bragit**. The class name constructed as `github-websemantics-bragit-stars`. other classes for this repository would be,
+The above example explain how to add a `stars` buttons of this repository, **Bragit**. The class name constructed as `github-websemantics-bragit-stars`. other classes for this repository would be,
 
 ```
 github-websemantics-bragit-stars
