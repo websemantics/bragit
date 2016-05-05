@@ -44,9 +44,9 @@ github-websemantics-bragit-download
 
 The library takes care of many things behind closed doors. For one thing, it makes sure that the buttons styles are loaded if the [Semantic-ui](http://semantic-ui.com/elements/button.html#labeled) framework was not detected in the loaded document.
 
-The code will automatically inject the css files that contain the styles of three `Semantic-ui` components `button`, `icon` and `label` using a public cnd `https://cdnjs.cloudflare.com/ajax/libs/semantic-ui`
+The code will automatically inject the css files that contain the styles of three `Semantic-ui` components `button`, `icon` and `label` using a public cdn `https://cdnjs.cloudflare.com/ajax/libs/semantic-ui`
 
-This can be overriden if required as follows
+This can be overridden if required as follows
 
 ```
 <script type="text/javascript">
