@@ -9,7 +9,7 @@
 
 ## How To
 
-1- Include the following script in web page. Notice the release number in the url, `0.1.0`.
+1- Include the following script in a web page. Notice the release number `0.1.0` in the url; change as needed.
 
 ```
 <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.0/bragit.js"></script>
