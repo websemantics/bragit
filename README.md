@@ -121,7 +121,7 @@ Notice how each action has two attributes, a `uri` and a `property` name. **Brag
 
 For example, using `stargazers_count` as an index to the repository data will return an number value. This number/text is then used to update the label element of the associated button (and that's how the magic happens, ladies and gents).
 
-#### Custom style
+#### Custom Buttons Styles
 
 [Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size). However we all need to customize styles to our needs sometimes. Here's a quick example of a new color named `brand` which is used in this project, **Bragit** to re-theme Github buttons as shown [here](http://websemantics.github.io/bragit/).
 
