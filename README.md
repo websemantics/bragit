@@ -85,7 +85,7 @@ By changing the delimiter to say `_` and the class name **cls** to `brag`, the c
 
 #### Actions
 
-Bragit supports a number of `actions` or `action buttons`, **stars**, **forks**, **watchers**, **issues**, **download**. These can be re-configured or more actions added through the `defaults` function,
+**Bragit** supports a number of `actions` or `action buttons`, **stars**, **forks**, **watchers**, **issues**, **download**. These can be re-configured or more actions added through the `defaults` function,
 
 ```
 <script type="text/javascript">
