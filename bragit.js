@@ -29,7 +29,7 @@
 }(this, function ($) {
   var root = this || global
   var doc = root.document
-  var me = {VERSION: '0.1.1'}
+  var me = {VERSION: '0.1.2'}
   var debug = false
   var base_uri = 'https://api.github.com/repos/'
   var semantic = ['semantic.min.css', 'semantic.css']
@@ -152,15 +152,22 @@
       /* extract the github information from the element class string,  .. results in
          an array ["github", "username", "repo name", "function"],
             i.e. ["github", "websemantics", "bragit", "stars"] */
-      var action = cls.slice(cls.indexOf(selector) , cls.length)
+      var parts = cls.slice(cls.indexOf(selector) , cls.length)
         .split(' ')[0].split(defaults.delimiter)
 
-      /* hide the element first
-      $('.'+action.join(defaults.delimiter)).attr('style','visibility:hidden'); */
+      /* Get the action (i.e. starts, forks etc) as the last part of the css class name*/
+      var action = parts.pop()
 
-      /* if an action has at least three parts, github, username/repo add to list of repos */
-      if (action.length > 2) {
-        repos[action[1] + defaults.delimiter + action[2]] = {username: action[1], repo: action[2]}
+      /* hide the element first
+      $('.'+parts.join(defaults.delimiter)).attr('style','visibility:hidden'); */
+
+      /* if an action has at least three parts, github (defaults.cls), username-repo add to list of repos, */
+      if (defaults.actions[action] && parts.length > 2) {
+        /* remove first element */
+        parts.shift()
+        var username = parts.shift()
+        var repo = parts.join(defaults.delimiter)
+        repos[username + defaults.delimiter + repo] = {username: username, repo: repo}
       }
     })
 

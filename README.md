@@ -10,10 +10,10 @@
 
 ## How To
 
-1- Include the following script in a web page. Notice the release number `0.1.1` in the url; change as needed.
+1- Include the following script in a web page. Notice the release number `0.1.2` in the url; change as needed.
 
 ```
-<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.1/bragit.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.2/bragit.js"></script>
 ```
 
 2- Add a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled).
