@@ -106,7 +106,7 @@
 
   /*
     Setup the buttons, scan the documents for classes with repo information
-    i.e. github-websemantics-semanti-stars
+    i.e. github-websemantics-bragit-stars
 
   */
 

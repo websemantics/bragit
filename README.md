@@ -2,8 +2,8 @@
 
 > Display your Github repositories stats in style using Semantic-ui labeled buttons. Working with [Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) to represent Github buttons (Stars, Forks, Watchers, Issues, Download and Contributors), this jQuery library requests a Github repository information and updates the associated buttons accordingly.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/websemantics/semanti/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/websemantics/semanti.svg)](https://github.com/websemantics/semanti/network) [![GitHub stars](https://img.shields.io/github/stars/websemantics/semanti.svg)](https://github.com/websemantics/semanti/stargazers)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/websemantics/semanti.svg)](http://isitmaintained.com/project/websemantics/semanti "Percentage of issues still open") [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/websemantics/bragit/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/websemantics/bragit.svg)](https://github.com/websemantics/bragit/network) [![GitHub stars](https://img.shields.io/github/stars/websemantics/bragit.svg)](https://github.com/websemantics/bragit/stargazers)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/websemantics/bragit.svg)](http://isitmaintained.com/project/websemantics/bragit "Percentage of issues still open") [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 #### [Try it](http://websemantics.github.io/bragit/)
 > Or follow the How To guide
@@ -206,13 +206,13 @@ All you need to do is to replace the main color `#756c74` and its lighter shade 
 
 <!-- ************************( Download )********************************-->
 
-<a class="ui brand tiny button semanti github-websemantics-bragit-download">
+<a class="ui brand tiny button github-wecs-bragit-download">
     <i class="download icon"></i> Download
 </a>
 
 <!-- **********************( Contributors )******************************-->
 
-<a class="ui brand tiny button semanti github-websemantics-bragit-contributors">
+<a class="ui brand tiny button github-websemantics-bragit-contributors">
     <i class="users icon"></i> Contributors
 </a>
 ```
