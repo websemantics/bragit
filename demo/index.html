@@ -26,153 +26,8 @@
 <link rel="stylesheet" type="text/css" href="lib/semantic-ui/dist/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="lib/codemirror/lib/codemirror.css">
 <link rel="stylesheet" type="text/css" href="lib/codemirror/theme/mdn-like.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
 <link rel="stylesheet" type="text/css" href="css/buttons.css">
-<style type="text/css">
-/* document styles */
-body, h1, h2, h3, h4, h5, div, p, span, code {
-  font-family: 'Roboto', sans-serif;
-}
-
-body {
-  background: #c2e3f5;
-  color:#756c74;
-  font-size: 1.3rem;
-  font-weight:300;
-}
-
-b, optgroup, strong, .CodeMirror span.cm-comment {
-    font-weight: 400;
-}
-
-.hero {
-  background: #b1d4e8;
-  overflow: hidden;
-  padding-bottom: 4rem;
-  padding-top: 2rem;
-  margin-bottom: 4rem;
-}
-
-img.logo {
-  width:100%;
-  float:left;
-}
-
-table.center {
-  margin-left:auto;
-  margin-right:auto;
-}
-
-table.center td {
-  text-align: center;
-}
-
-.container {
-  max-width: 64em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* content styles */
-.title-l{
-  font-size:4rem;
-}
-
-.title-m {
-  font-size:2rem;
-}
-
-.text-m {
-  font-size: 1.5rem;
-}
-
-.text-l {
-  font-size: 1.7rem;
-}
-
-.ui.segment.content {
-  border:none;
-  position: relative;
-  top: -7rem;
-  padding:2rem 4rem 4rem 4rem;
-  min-height:500px;
-}
-
-.ui.container .buttons {
-  padding-bottom: 20px;
-}
-
-.ui.segment.content .tentacle {
-  float:right;
-  padding-right:80px;
-  margin-top: -50px;
-}
-
-/* code snippets styles */
-code {
-  background: #f5f7fa;
-  color: #ed6c63;
-  font-weight:300;
-  padding: 1px 2px 2px 6px;
-}
-
-code .CodeMirror {
-  background: none;
-  height:100%;
-  font-weight:300;
-}
-
-code.custom, code.xml, code.htmlmixed, code.javascript, code.shell{
-  display: flex;
-  border-radius: 5px;
-  border: 5px solid #f5f7fa;
-  margin:2rem 0 2rem 0;
-}
-
-code.custom {
-  color: #777;
-  white-space: pre ;
-  display: block;
-}
-
-/* footer styles */
-.ui.footer {
-  margin-bottom: 2rem;
-  background-color: #c2e3f5;
-}
-
-.footer img {
-  vertical-align: middle;
-}
-
-.footer h4 a {
-  font-size: 1.3rem;
-  color:#756c74;
-}
-
-.footer h4 a:hover {
-  color:#5C4E47;
-}
-
-.footer .tentacle {
-  vertical-align: baseline;
-}
-
-/* text selection */
-::selection {
-  background-color: #ebdaca !important;
-}
-
-::-moz-selection {
-  background-color: #ebdaca !important;
-}
-
-.CodeMirror-selected, .styled-background,
-.cm-s-mdn-like .CodeMirror-line::selection,
-.cm-s-mdn-like .CodeMirror-line > span::selection,
-.cm-s-mdn-like .CodeMirror-line > span > span::selection {
-  background-color: #ebdaca !important;
-}
-</style>
 </head>
 <body class="stretched">
    <section class="hero">
@@ -225,82 +80,120 @@ code.custom {
       </div>
     </div>
   </section>
-
-	<div id="container" class="ui container">
-
-    <div class="ui segment content">
-      <img class="tentacle" src="img/short-tentacle.svg"/>
-
-      <h1 class="title-m">What is it</h1>
-
-      <p>An eforetless way to present Github stats buttons of your repositories while not compromise on style using the amazing <a href="http://semantic-ui.com/">Semantic-ui</a> framework.</p>
-
-      <h1 class="title-m">How To</h1>
-
-      <p>1- Include the following in your page.</p>
-
-      <code class="xml cm-s-mdn-like">&lt;script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.2/bragit.js"&gt;&lt;/script&gt;</code>
-
-      <p>2- Insert a labled button as specified in <a href="http://semantic-ui.com/elements/button.html#labeled">Semantic-ui documentation</a> and add a class name for the Github button you desire. For example, to show the stars buttons of Bragit repository the class would be <code>github-websemantics-bragit-stars</code></p>
-
-      <code class="htmlmixed cm-s-mdn-like"><a class="ui labeled tiny button github-websemantics-bragit-stars">
-        <div class="ui brand tiny button">
-          <i class="star icon"></i> Stars
+  <div class="pusher">
+    <div class="ui container">
+      <div class="ui segment content generator">
+        <div class="ui form">
+          <div class="fields">
+            <div id="github-input" class="ten wide uri field">
+              <div class="ui labeled input">
+                <div class="ui label">
+                  http://github.com/
+                </div>
+                <input id="username" type="text" autocomplete="off" placeholder="Username" value="" class="join right popup" data-content="Enter your Github username" data-variation="inverted">
+                <div class="ui label middle">/</div>
+                <input id="repository" type="text" placeholder="Repository" value="" class="join left popup" data-content="Enter your Github repository name" data-variation="inverted">
+              </div>
+            </div>
+            <div class="two wide field popup" data-content="Select button size" data-variation="inverted">
+              <select id="size" class="ui compact dropdown">
+                <option value="mini">Mini</option>
+                <option value="tiny" selected="selected">Tiny</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="big">Big</option>
+                <option value="huge">Huge</option>
+                <option value="massive">Massive</option>
+              </select>
+            </div>
+            <div class="four wide field popup" data-content="Select a color class or set your custom color" data-variation="inverted">
+              <div class="ui action input">
+                <input id="color" type="text" placeholder="Color" value="#FFFFFF">
+                <select id="color-select" class="ui compact selection dropdown">
+                  <option value="default">Default</option>
+                  <option value="custom">Custom</option>
+                  <option value="red">Red</option>
+                  <option value="orange">Orange</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="olive">Olive</option>
+                  <option value="green">Green</option>
+                  <option value="teal">Teal</option>
+                  <option value="blue">Blue</option>
+                  <option value="violet">Violet</option>
+                  <option value="purple">Purple</option>
+                  <option value="pink">Pink</option>
+                  <option value="brown">Brown</option>
+                  <option value="grey">Grey</option>
+                  <option value="black">Black</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="fields">
+            <div class="twelve wide uri field popup" data-content="Select Bragit button types" data-variation="inverted">
+              <select id="actions-select" multiple="" class="ui dropdown">
+                <option value="stars">Stars</option>
+                <option value="forks">Forks</option>
+                <option value="watchers">Watchers</option>
+                <option value="issues">Issues</option>
+                <option value="download">Download</option>
+                <option value="contributors">Contributors</option>
+                <option value="github">Github</option>
+              </select>
+            </div>
+            <div class="two wide field popup" data-content="Clear the form and start all over" data-variation="inverted">
+              <button id="clear" class="fluid ui basic button"><i class="icon trash"></i> Clear</button>
+            </div>
+            <div class="two wide field popup" data-content="Refresh the generated code" data-variation="inverted">
+              <button id="refresh" class="fluid ui basic flex button"><i class="icon refresh"></i> Refresh</button>
+            </div>
+          </div>
         </div>
-        <div class="ui basic brand left pointing label">
-          <i class="spinner loading icon"></i>
+        <div id="display" class="hidden ui segment">
+          <div class="ui top right attached label">Preview</div>
+          <div id="display-content"></div>
         </div>
-      </a></code>
 
-      <p>3- That's it! The result is shown below.</p>
-
-      <a class="ui labeled tiny button github-websemantics-bragit-stars">
-        <div class="ui primary tiny button">
-          <i class="star icon"></i> Stars
+        <div id="code" class="hidden ui segment">
+          <div class="ui top right attached label">Code</div>
+          <code id="code-content" class="mixedMode">
+          </code>
         </div>
-        <div class="ui basic primary left pointing label">
-          <i class="spinner loading icon"></i>
-        </div>
-      </a>
-
+      </div>
     </div>
-	</div>
+  </div>
   <div class="ui footer">
-	    <div class="ui container">
-        <table class="center">
-          <tr>
-            <td>
-              Built with <img data-preserve-html-node="true" src="img/heart.svg" alt="love" style="width:22px;height:22px;"> by &nbsp;<br/>
-              <h4><a href="http://websemantics.ca">Web Semantics, Inc.</a></h4>
-            </td>
-            <td>
-              <img class="tentacle" src="img/tentacle.svg"/>
-            </td>
-          </tr>
-        </table>
-	    </div>
+    <div class="ui container">
+      <table class="center">
+        <tr>
+          <td>
+            Built with <img data-preserve-html-node="true" src="img/heart.svg" alt="love" style="width:22px;height:22px;"> by &nbsp;<br/>
+            <h4><a href="http://websemantics.ca">Web Semantics, Inc.</a></h4>
+          </td>
+          <td>
+            <img class="tentacle" src="img/tentacle.svg"/>
+          </td>
+        </tr>
+      </table>
+    </div>
 	</div>
   <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="lib/semantic-ui/dist/semantic.min.js"></script>
+  <script type="text/javascript" src="lib/tinyColorPicker/jqColorPicker.min.js"></script>
+  <script type="text/javascript" src="lib/tinycolor/dist/tinycolor-min.js"></script>
+  <script type="text/javascript" src="lib/handlebars/handlebars.min.js"></script>
   <script src="lib/codemirror/lib/codemirror.js" type="text/javascript"></script>
   <script src="lib/codemirror/mode/xml/xml.js" type="text/javascript"></script>
   <script src="lib/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
   <script src="lib/codemirror/mode/shell/shell.js" type="text/javascript"></script>
   <script src="lib/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+  <script src="lib/codemirror/mode/vbscript/vbscript.js" type="text/javascript"></script>
+  <script src="lib/codemirror/mode/css/css.js" type="text/javascript"></script>
+  <script src="lib/js-beautify/js/lib/beautify.js" type="text/javascript"></script>
+  <script src="lib/js-beautify/js/lib/beautify-html.js" type="text/javascript"></script>
+  <script src="lib/js-beautify/js/lib/beautify-css.js" type="text/javascript"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.2/bragit.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      ['code.shell', 'code.javascript', 'code.xml', 'code.htmlmixed'].forEach(function(cls){
-        if(mode = cls.indexOf('.') > -1 ? cls.split(".")[1] : null){ /* allow only valid class names */
-          $(cls).each(function() {
-              var $code = $(this).html().replace(/&lt;/g, "<").replace(/&gt;/g, ">");
-              $(this).empty();
-              CodeMirror(this, { value: $code, mode: mode, readOnly: true, styleSelectedText: true});
-          });
-        }
-      });
-    });
-  </script>
-
+  <script src="js/index.js" type="text/javascript"></script>
 </body>
 </html>

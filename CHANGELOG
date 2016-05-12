@@ -18,6 +18,6 @@
 0.0.0
   date: 0000-00-00
   changes:
-  - Use public CDN for javascript, https://rawgit.com/
+  - Use public CDN for javascript, https://rawgit.com
   - Submit the library url, https://github.com/websemantics/bragit/blob/0.1.2/bragit.js
   - Notice the release number, this must be done for all new releases

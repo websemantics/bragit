@@ -41,6 +41,11 @@ github-websemantics-bragit-issues
 github-websemantics-bragit-download
 ```
 
+## Preview
+
+![Preview](https://raw.githubusercontent.com/websemantics/bragit/master/demo/img/bragit.gif)
+
+
 ## Behind the Scenes
 
 The library takes care of many things behind closed doors. For one thing, it makes sure that the buttons styles are loaded if the [Semantic-ui](http://semantic-ui.com/elements/button.html#labeled) framework was not detected in the loaded document.
