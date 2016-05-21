@@ -22,7 +22,7 @@
         return (root.Bragit = factory(jQuery))
       })
   } else if (typeof module === 'object' && module.exports) {
-    module.exports = factory(require('jQuery'))
+    module.exports = factory(require('jquery'))
   } else {
     root.Bragit = factory(root.jQuery)
   }
