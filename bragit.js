@@ -29,7 +29,7 @@
 }(this, function ($) {
   var root = this || global
   var doc = root.document
-  var me = {VERSION: '0.1.2'}
+  var me = {VERSION: '0.1.4'}
   var debug = false
   var base_uri = 'https://api.github.com/repos/'
   var semantic = ['semantic.min.css', 'semantic.css']
@@ -48,6 +48,7 @@
     - css (object), contains information about css styles to be injected into the document at run-time
     * version (string), semantic-ui version
     * inject (boolean), if true, inject semantic-ui styles (false by default)
+    * ignore (boolean), if true, don't inject semantic-ui styles (false by default)
     * uri (string), uri template for the cdn used
     * modules (array), list of semantic-ui components
     * custom (string), any custom css styles if css has been injected
@@ -82,6 +83,7 @@
     },
     css: {
       version: '2.1.8',
+      ignore: false,
       inject: false,
       uri: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/{{version}}/components/{{module}}.min.css',
       modules: ['button', 'icon', 'label'],
@@ -126,7 +128,7 @@
     }
 
     /* if semantic-ui css file is not loaded, set inject to true if not already */
-    if (!loaded || defaults.css.inject) {
+    if (!defaults.css.ignore && (!loaded || defaults.css.inject)) {
       log('Injecting semantic-ui buttons ...')
       for (var i in defaults.css.modules) {
         $('head').append('<link rel="stylesheet" href="'
