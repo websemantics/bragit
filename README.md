@@ -2,7 +2,7 @@
 
 > Display your Github repositories stats in style using Semantic-ui labeled buttons. Working with [Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) to represent Github buttons (Stars, Forks, Watchers, Issues, Download and Contributors), this jQuery library requests a Github repository information and updates the associated buttons accordingly.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/websemantics/bragit/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/websemantics/bragit.svg)](https://github.com/websemantics/bragit/network) [![GitHub stars](https://img.shields.io/github/stars/websemantics/bragit.svg)](https://github.com/websemantics/bragit/stargazers)
+[![Build Status](https://travis-ci.org/websemantics/bragit.svg?branch=master)](https://travis-ci.org/websemantics/bragit) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/websemantics/bragit/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/websemantics/bragit.svg)](https://github.com/websemantics/bragit/network) [![GitHub stars](https://img.shields.io/github/stars/websemantics/bragit.svg)](https://github.com/websemantics/bragit/stargazers)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/websemantics/bragit.svg)](http://isitmaintained.com/project/websemantics/bragit "Percentage of issues still open") [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 #### [Try it](http://websemantics.github.io/bragit/)
