@@ -1,6 +1,6 @@
 {
   "name": "bragit",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Show off your Github repository buttons with elegance.",
   "main": "bragit.js",
   "config": {
@@ -37,8 +37,17 @@
   "bugs": {
     "url": "https://github.com/websemantics/bragit/issues"
   },
+  "devDependencies": {
+    "semantic-ui": "*",
+    "codemirror": "*",
+    "tinyColorPicker": "*",
+    "handlebars": "*",
+    "tinycolor": "*",
+    "js-beautify" : "*",
+    "gitters" : "*"
+  },
   "dependencies": {
-    "gitters": "*"
+    "gitters" : "*"
   },
   "homepage": "https://github.com/websemantics/bragit#readme"
 }
