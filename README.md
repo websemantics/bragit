@@ -8,12 +8,13 @@
 #### [Try it](http://websemantics.github.io/bragit/)
 > Or follow the How To guide
 
-## How To
 
-1- Include the following script in a web page. Notice the release number `0.1.2` in the url; change as needed.
+## Getting Started
+
+1- Include the following script in a web page. Notice the release number `0.1.5` in the url; change as needed.
 
 ```
-<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.2/bragit.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.5/bragit.js"></script>
 ```
 
 2- Add a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled).
@@ -40,6 +41,7 @@ github-websemantics-bragit-watchers
 github-websemantics-bragit-issues
 github-websemantics-bragit-download
 ```
+
 
 ## Preview
 
@@ -70,6 +72,7 @@ This can be overridden if required as follows
 
 Notice the `inject` flag which is responsible to force the injection of the specified components styles if set to `true`. Other modules can be added to the list of auto-loaded components and or a custom css styles by setting the `custom` attribute `custom: "css/styles.css"`
 
+
 #### Custom Class Names
 
 As explained above, **Bragit** detects the existence of a unique css class name pattern, **`github-{username}-{repo}-{action}`** to retrieve the required Github repository information and update the associated labeled buttons accordingly.
@@ -88,6 +91,7 @@ However, should the need arise, this can be changed as follows,
 ```
 
 By changing the delimiter to say `_` and the class name **cls** to `brag`, the class name for the `stars` button of this repository will be `brag_websemantics_bragit_stars`.
+
 
 #### Actions
 
@@ -128,6 +132,7 @@ By changing the delimiter to say `_` and the class name **cls** to `brag`, the c
 Notice how each action has two attributes, a `uri` and a `property` name. **Bragit** appends the `uri` value to the repository `html_url` retrieved from Github API. This is then used to set the `href` value of the labeled button link element `a`. The `property` name is used to access a named attribute in the repository information returned from Github API.
 
 For example, using `stargazers_count` as an index to the repository data will return an number value. This number/text is then used to update the label element of the associated button (and that's how the magic happens, ladies and gents).
+
 
 #### Custom Buttons Styles
 
@@ -222,6 +227,7 @@ All you need to do is to replace the main color `#756c74` and its lighter shade 
 </a>
 ```
 
+
 ## Using Bower
 
 If the use of [Bower](http://bower.io/) is prefered, one can either include **Bragit** in the `bower.json` file or install from the command line,
@@ -230,9 +236,12 @@ If the use of [Bower](http://bower.io/) is prefered, one can either include **Br
 Bower install bragit
 ```
 
+
 ## Bragit in the Wild
 
 Here a list of awesome projects (ahem) that used **Bragit**, .. let's all applaud, right.
+
+* [Github SPA](https://websemantics.github.io/gh-pages-spa/), Easy way to enable Single Page Applications for GitHub Pages.
 
 * [Image Select](https://github.com/websemantics/Image-Select), jQuery library that provides image support for Single and Multi select HTML tags to be used with [Chosen](https://harvesthq.github.io/chosen/).
 

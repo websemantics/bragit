@@ -17,26 +17,31 @@
 
 ;(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define(['jQuery'],
-      function (jQuery) {
-        return (root.Bragit = factory(jQuery))
+    define(['jQuery', 'gitters'],
+      function (jQuery, Gitters) {
+        return (root.Bragit = factory(jQuery, Gitters))
       })
   } else if (typeof module === 'object' && module.exports) {
-    module.exports = factory(require('jquery'))
+    module.exports = factory(require('jquery'), require('gitters'))
   } else {
-    root.Bragit = factory(root.jQuery)
+    root.Bragit = factory(root.jQuery, root.Gitters)
   }
-}(this, function ($) {
+}(this, function ($, Gitters) {
   var root = this || global
   var doc = root.document
-  var me = {VERSION: '0.1.4'}
-  var debug = false
-  var base_uri = 'https://api.github.com/repos/'
+  var me = {VERSION: '0.1.5'}
   var semantic = ['semantic.min.css', 'semantic.css']
+
 
   /* Library defaults, can be changed using the 'defaults' member method,
 
-    - delimiter (string), used to glue / unglue classes
+  - clearOnStart (boolean), false by default, if true, clears the Gitters cache
+
+  - expires (int), minutes for cached requests to expire in minutes (60 minute by default)
+
+  - debug (boolean), show logs if true
+
+  - delimiter (string), used to glue / unglue classes
 
     - cls (string), prefix for the class names used to inject github stats / urls etc,
 
@@ -55,41 +60,7 @@
 
   */
 
-  var defaults = {
-    delimiter: '-',
-    cls: 'github',
-    actions: {forks: {
-        uri: '/network',
-        property: 'forks_count'
-      },stars: {
-        uri: '/stargazers',
-        property: 'stargazers_count'
-      },watchers: {
-        uri: '/watchers',
-        property: 'subscribers_count'
-      },issues: {
-        uri: '/issues',
-        property: 'open_issues_count'
-      },download: {
-        uri: '/archive/master.zip',
-        property: null
-      },github: {
-        uri: '',
-        property: null
-      },contributors: {
-        uri: '/contributors',
-        property: null
-      }
-    },
-    css: {
-      version: '2.1.8',
-      ignore: false,
-      inject: false,
-      uri: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/{{version}}/components/{{module}}.min.css',
-      modules: ['button', 'icon', 'label'],
-      custom: null
-    }
-  }
+  var defaults = {}
 
   // -------------------------------------------------------------------------
   // Public methods
@@ -103,7 +74,14 @@
   */
 
   me.defaults = function (opts) {
-    return $.extend(true, defaults, opts)
+    var ret = $.extend(true, defaults, opts)
+
+    Gitters.defaults({
+      clearOnStart: defaults.clearOnStart,
+      debug: defaults.debug,
+      expires: defaults.expires})
+
+    return ret;
   }
 
   /*
@@ -201,15 +179,9 @@
 
   function get (repo, cb) {
     try {
-      $.ajax({
-        url: base_uri + repo.username + '/' + repo.repo,
-        complete: function (xhr) {
-          cb.call(null, repo, xhr.responseJSON)
-        },
-        error: function (err) {
-          log((err && err.responseJSON) ? err.responseJSON['message'] : 'There has been an error')
-        }
-      })
+      Gitters.fetch(repo.username + '/' + repo.repo, function(data){
+        cb.call(null, repo, data)
+      }, /* bubble error */ true)
     } catch(err) {
       log(err.message)
     }
@@ -240,16 +212,59 @@
   */
 
   function log (message) {
-    if (debug) {
+    if (defaults.debug) {
       console.log(message)
     }
   }
 
   if (typeof $ === 'undefined') {
-    console.error('Please install the latest jQuery!')
-  } else {
-    $(function () {me.init()})
+      console.error('Please install the latest jQuery library')
+  } else if (typeof Gitters === 'undefined') {
+      console.error('Please install the latest Gitters library')
+  }  else {
+      $(function () {me.init()})
   }
+
+  /* set defaults */
+
+  me.defaults({
+    clearOnStart: false,
+    expires: 60,
+    debug: false,
+    delimiter: '-',
+    cls: 'github',
+    actions: {forks: {
+        uri: '/network',
+        property: 'forks_count'
+      },stars: {
+        uri: '/stargazers',
+        property: 'stargazers_count'
+      },watchers: {
+        uri: '/watchers',
+        property: 'subscribers_count'
+      },issues: {
+        uri: '/issues',
+        property: 'open_issues_count'
+      },download: {
+        uri: '/archive/master.zip',
+        property: null
+      },github: {
+        uri: '',
+        property: null
+      },contributors: {
+        uri: '/contributors',
+        property: null
+      }
+    },
+    css: {
+      version: '2.1.8',
+      ignore: false,
+      inject: false,
+      uri: 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/{{version}}/components/{{module}}.min.css',
+      modules: ['button', 'icon', 'label'],
+      custom: null
+    }
+  })
 
   return me
 }))

@@ -1,9 +1,20 @@
 {
   "name": "bragit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Show off your Github repository buttons with elegance.",
   "main": "bragit.js",
+  "config": {
+    "deploy": {
+      "dist": "./demo/",
+      "name": "iAyeBot",
+      "email": "iayebot@websemantics.ca",
+      "branch": "master:gh-pages",
+      "message": "Deploy to gh-pages"
+    }
+  },
   "scripts": {
+    "deploy": "cd $npm_package_config_deploy_dist && git push --force --quiet \"https://${GH_TOKEN}@${GH_REF}\" ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
+    "predeploy": "bower install && cd $npm_package_config_deploy_dist && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,6 +25,8 @@
     "semantic-ui",
     "github",
     "buttons",
+    "gitters",
+    "larder",
     "jquery"
   ],
   "author": {
@@ -25,7 +38,7 @@
     "url": "https://github.com/websemantics/bragit/issues"
   },
   "dependencies": {
-    "jquery": "*"
+    "gitters": "*"
   },
   "homepage": "https://github.com/websemantics/bragit#readme"
 }

@@ -1,3 +1,11 @@
+0.1.5
+    date: 2016-08-21
+    changes:
+    - Cache Github API calls with Gitters
+    - Deploy using an NPM script
+    - Add `clearOnStart` default settings to clear cache
+    - Add `expires` default settings for cached requests (1 hour by default)
+
 0.1.4
     date: 2016-05-26
     changes:
