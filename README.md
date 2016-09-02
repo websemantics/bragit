@@ -11,10 +11,10 @@
 
 ## Getting Started
 
-1- Include the following script in a web page. Notice the release number `1.0.2` in the url; change as needed.
+1- Include the following script in a web page. Notice the release number `1.0.3` in the url; change as needed.
 
 ```
-<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.2/bragit.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.3/bragit.js"></script>
 ```
 
 2- Add a labeled button as specified in [Semantic-UI documentation](http://semantic-ui.com/elements/button.html#labeled).
@@ -260,16 +260,16 @@ bower i
 - Increase the current release number,
 
 ```bash
-npm run change-version 1.0.2 2.0.0
+npm run change-version 1.0.3 2.0.0
 ```
 
-Notice that, the the first parameter is the current release followed by the new version number.
+Notice that, the the first parameter is the current release followed by the new version number,
 
 The [change-version](https://github.com/twbs/bootstrap/blob/master/grunt/change-version.js) script will change all the files that contain the current version number including `package.js`, `bower.js`, `bragit.js`, `README.md`, `demo/js/index.js` and `CHANGELOG` (undo any changes to `CHANGELOG`).
 
-This saves a bit of time so huge thanks to [Bootstrap](https://github.com/twbs/bootstrap) contributors for this script.
+This saves time and an unnecessary pain trying to find all release number instances, so huge thanks to [Bootstrap](https://github.com/twbs/bootstrap) contributors for this script.
 
-- Build a distribution bundle, stored at `./dist/bragit.js`,
+- Build a distribution bundle, which will be stored at `./dist/bragit.js`,
 
 ```bash
 npm run build
@@ -291,10 +291,10 @@ bower register
 
 Browse to [Rawgit](http://rawgit.com),
 
-Publish a tagged version of bragit.js bundle, for example
+Publish a tagged version of `dist/bragit.js` bundle, for example
 
 ```
-https://github.com/websemantics/bragit/blob/1.0.2/dist/bragit.js
+https://github.com/websemantics/bragit/blob/1.0.3/dist/bragit.js
 ```
 
 

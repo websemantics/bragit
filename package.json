@@ -1,6 +1,6 @@
 {
   "name": "bragit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Show off your Github repository buttons with elegance.",
   "main": "dist/bragit.js",
   "config": {
@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "build": "./node_modules/.bin/browserify bragit.js -o dist/bragit.js",
+    "build": "./node_modules/uglify-js/bin/uglifyjs ./node_modules/base-64/base64.js node_modules/larder/larder.js ./node_modules/gitters/gitters.js bragit.js > dist/bragit.js",
     "change-version": "node node_modules/bootstrap/grunt/change-version.js",
     "deploy": "cd $npm_package_config_deploy_dist && git push --force --quiet \"https://${GH_TOKEN}@${GH_REF}\" ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
     "predeploy": "bower install && cd $npm_package_config_deploy_dist && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" ",
@@ -42,10 +42,8 @@
   "devDependencies": {
     "bootstrap": "4.0.0-alpha.3",
     "shelljs": "^0.7.0",
-    "browserify": "*"
-  },
-  "dependencies": {
-    "gitters" : "*"
+    "uglify-js": "^2.7.3",
+    "gitters": "*"
   },
   "homepage": "https://github.com/websemantics/bragit#readme"
 }
