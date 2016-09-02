@@ -1,7 +1,7 @@
 {
   "name": "bragit",
   "main": "dist/bragit.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/websemantics/bragit",
   "authors": [
     "Adnan <adnan@websemantics.ca>"
@@ -27,8 +27,7 @@
     "tinyColorPicker": "*",
     "handlebars": "*",
     "tinycolor": "*",
-    "js-beautify" : "*",
-    "gitters" : "*"
+    "js-beautify" : "*"
   },
   "dependencies": {
     "gitters" : "*"
