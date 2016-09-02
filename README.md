@@ -11,10 +11,10 @@
 
 ## Getting Started
 
-1- Include the following script in a web page. Notice the release number `0.1.6` in the url; change as needed.
+1- Include the following script in a web page. Notice the release number `1.0.0` in the url; change as needed.
 
 ```
-<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.6/bragit.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.0/bragit.js"></script>
 ```
 
 2- Add a labeled button as specified in [Semantic-UI documentation](http://semantic-ui.com/elements/button.html#labeled).
@@ -234,6 +234,67 @@ If the use of [Bower](http://bower.io/) is prefered, one can either include **Br
 
 ```
 Bower install bragit
+```
+
+
+## Contributions
+
+We are more than happy to accept external contributions to the project in the form of feedback, bug reports and even better - pull requests :)
+
+To start development of **Bragit** locally on your machine run through the following steps,
+
+- Install NPM dependencies,
+
+```bash
+npm i
+```
+
+- Optionally, install Bower dependencies to view the demo app located at `./demo` folder,
+
+```bash
+bower i
+```
+
+- Make changes to `./bragit.js`,
+
+- Increase the current release number,
+
+```bash
+npm run change-version 1.0.0 2.0.0
+```
+
+Notice that, the the first parameter is the current release followed by the new version number.
+
+The [change-version](https://github.com/twbs/bootstrap/blob/master/grunt/change-version.js) script will change all the files that contain the current version number including `package.js`, `bower.js`, `bragit.js`, `README.md`, `demo/js/index.js` and `CHANGELOG` (undo any changes to `CHANGELOG`).
+
+This saves a bit of time so huge thanks to [Bootstrap](https://github.com/twbs/bootstrap) contributors for this script.
+
+- Build a distribution bundle, stored at `./dist/bragit.js`,
+
+```bash
+npm run build
+```
+
+- Publish the new NPM package (owner)
+
+```bash
+npm publish
+```
+
+- Register for Bower (owner),
+
+```bash
+bower register
+```
+
+- Release a CDN instance,
+
+Browse to [Rawgit](http://rawgit.com),
+
+Publish a tagged version of bragit.js bundle, for example
+
+```
+https://github.com/websemantics/bragit/blob/1.0.0/dist/bragit.js
 ```
 
 

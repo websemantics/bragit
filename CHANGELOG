@@ -1,8 +1,9 @@
-0.1.7
+1.0.0
     date: 2016-09-01
     changes:
     - Build distribution with all dependences for CDN,
     - Use `change-version` script from Bootstrap 4,
+    - Add instructions on how to contribute,
     - First full release,
 
 0.1.6

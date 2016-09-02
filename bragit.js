@@ -29,7 +29,7 @@
 }(this, function ($, Gitters) {
   var root = this || global
   var doc = root.document
-  var me = {VERSION: '0.1.6'}
+  var me = {VERSION: '1.0.0'}
   var semantic = ['semantic.min.css', 'semantic.css']
 
 

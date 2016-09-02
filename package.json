@@ -1,8 +1,8 @@
 {
   "name": "bragit",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Show off your Github repository buttons with elegance.",
-  "main": "bragit.js",
+  "main": "dist/bragit.js",
   "config": {
     "deploy": {
       "dist": "./demo/",

@@ -1,7 +1,7 @@
 {
   "name": "bragit",
-  "main": "bragit.js",
-  "version": "0.1.6",
+  "main": "dist/bragit.js",
+  "version": "1.0.0",
   "homepage": "https://github.com/websemantics/bragit",
   "authors": [
     "Adnan <adnan@websemantics.ca>"
