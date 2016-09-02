@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "bootstrap": "4.0.0-alpha.3",
+    "shelljs": "^0.7.0",
     "browserify": "*"
   },
   "dependencies": {
