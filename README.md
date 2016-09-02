@@ -1,6 +1,6 @@
 ![Bragit](https://raw.githubusercontent.com/websemantics/bragit/master/demo/img/header.png)
 
-> Display your Github repositories stats in style using Semantic-ui labeled buttons. Working with [Semantic-ui labeled buttons](http://semantic-ui.com/elements/button.html#labeled) to represent Github buttons (Stars, Forks, Watchers, Issues, Download and Contributors), this jQuery library requests a Github repository information and updates the associated buttons accordingly.
+> Display your Github repositories stats in style using Semantic-UI labeled buttons. Working with [Semantic-UI labeled buttons](http://semantic-ui.com/elements/button.html#labeled) to represent Github buttons (Stars, Forks, Watchers, Issues, Download and Contributors), this jQuery library requests a Github repository information and updates the associated buttons accordingly.
 
 [![Build Status](https://travis-ci.org/websemantics/bragit.svg?branch=master)](https://travis-ci.org/websemantics/bragit) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/websemantics/bragit/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/websemantics/bragit.svg)](https://github.com/websemantics/bragit/network) [![GitHub stars](https://img.shields.io/github/stars/websemantics/bragit.svg)](https://github.com/websemantics/bragit/stargazers)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/websemantics/bragit.svg)](http://isitmaintained.com/project/websemantics/bragit "Percentage of issues still open") [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/0.1.6/bragit.js"></script>
 ```
 
-2- Add a labeled button as specified in [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled).
+2- Add a labeled button as specified in [Semantic-UI documentation](http://semantic-ui.com/elements/button.html#labeled).
 
 3- Add a custom class name for the Github button you desire following a basic convention **`github-{username}-{repo}-{action}`** where action can be, **stars**, **forks**, **watchers**, **issues**, **download** or **contributors**.
 
@@ -50,9 +50,9 @@ github-websemantics-bragit-download
 
 ## Behind the Scenes
 
-The library takes care of many things behind closed doors. For one thing, it makes sure that the buttons styles are loaded if the [Semantic-ui](http://semantic-ui.com/elements/button.html#labeled) framework was not detected in the loaded document.
+The library takes care of many things behind closed doors. For one thing, it makes sure that the buttons styles are loaded if the [Semantic-UI](http://semantic-ui.com/elements/button.html#labeled) framework was not detected in the loaded document.
 
-The code will automatically inject the css files that contain the styles of three `Semantic-ui` components `button`, `icon` and `label` using a public cdn `https://cdnjs.cloudflare.com/ajax/libs/semantic-ui`
+The code will automatically inject the css files that contain the styles of three `Semantic-UI` components `button`, `icon` and `label` using a public cdn `https://cdnjs.cloudflare.com/ajax/libs/semantic-ui`
 
 This can be overridden if required as follows
 
@@ -136,7 +136,7 @@ For example, using `stargazers_count` as an index to the repository data will re
 
 #### Custom Buttons Styles
 
-Semantic-ui [labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size). However we all need to customize styles to our needs sometimes. Here's a quick example of a new color named `brand` which is used in this project, **Bragit** to re-theme Github buttons as shown [here](http://websemantics.github.io/bragit/).
+Semantic-UI [labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size). However we all need to customize styles to our needs sometimes. Here's a quick example of a new color named `brand` which is used in this project, **Bragit** to re-theme Github buttons as shown [here](http://websemantics.github.io/bragit/).
 
 ```
 /* styles for github action buttons */
@@ -239,13 +239,23 @@ Bower install bragit
 
 ## Bragit in the Wild
 
-Here a list of awesome projects (ahem) that used **Bragit**, .. let's all applaud, right.
+Here a list of awesome projects (ahem) that use **Bragit**, .. let's all applaud, right,
+
+* [Themeblr](https://websemantics.github.io/themeblr/), A powerful CSS framework boilerplate and Bootstrap 4](http://v4-alpha.getbootstrap.com/) themes builder.
+
+* [Brimer](https://websemantics.github.io/brimer/), Github [Primer](http://primercss.io) CSS toolkit with a 'B' (as in Bootstrap).
+
+* [Semantic Ant](https://websemantics.github.io/semantic-ant), A custom theme for building beautiful modern Web apps with the combined awesomeness of [Semantic-UI](http://semantic-ui.com/) framework and the elegant minimal styles of [Ant Design](http://ant.design/) for beautiful and responsive layouts.
+
+* [Strapant](https://github.com/websemantics/strapant), [Ant Design](http://ant.design/) inspired theme for Twitter [Bootstrap 4](http://v4-alpha.getbootstrap.com/).
+
+* [Semantic Strap](https://github.com/websemantics/semantic-strap), [Semantic-UI](http://semantic-ui.com/) inspired theme for Twitter [Bootstrap 4](http://v4-alpha.getbootstrap.com/).
 
 * [Github SPA](https://websemantics.github.io/gh-pages-spa/), Easy way to enable Single Page Applications for GitHub Pages.
 
 * [Image Select](https://github.com/websemantics/Image-Select), jQuery library that provides image support for Single and Multi select HTML tags to be used with [Chosen](https://harvesthq.github.io/chosen/).
 
-* [Semantic Dojo](https://github.com/websemantics/semantic-dojo), A responsive Dojo theme that harnesses the style awesomeness of [Semantic-ui documentation](http://semantic-ui.com/elements/button.html#labeled) framework.
+* [Semantic Dojo](https://github.com/websemantics/semantic-dojo), A responsive [Dojo Toolkit](https://dojotoolkit.org/) theme that harnesses the style awesomeness of [Semantic-UI documentation](http://semantic-ui.com/elements/button.html#labeled) framework.
 
 * [Palette Genie](https://github.com/websemantics/palette-genie), Turns color values from an Image or PhotoShop ACO file into a list of named colors, lighter and darker shades, CSS classes and a beautiful style guide.
 

@@ -13,6 +13,8 @@
     }
   },
   "scripts": {
+    "build": "./node_modules/.bin/browserify bragit.js -o dist/bragit.js",
+    "change-version": "node node_modules/bootstrap/grunt/change-version.js",
     "deploy": "cd $npm_package_config_deploy_dist && git push --force --quiet \"https://${GH_TOKEN}@${GH_REF}\" ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
     "predeploy": "bower install && cd $npm_package_config_deploy_dist && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -38,13 +40,8 @@
     "url": "https://github.com/websemantics/bragit/issues"
   },
   "devDependencies": {
-    "semantic-ui": "*",
-    "codemirror": "*",
-    "tinyColorPicker": "*",
-    "handlebars": "*",
-    "tinycolor": "*",
-    "js-beautify" : "*",
-    "gitters" : "*"
+    "bootstrap": "4.0.0-alpha.3",
+    "browserify": "*"
   },
   "dependencies": {
     "gitters" : "*"
