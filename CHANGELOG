@@ -1,3 +1,8 @@
+1.0.1
+    date: 2016-09-02
+    changes:
+    - Release a distribution bundle at `dist/bragit.js`,
+
 1.0.0
     date: 2016-09-01
     changes:
