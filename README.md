@@ -11,10 +11,10 @@
 
 ## Getting Started
 
-1- Include the following script in a web page. Notice the release number `1.0.4` in the url; change as needed.
+1- Include the following script in a web page. Notice the release number `1.0.5` in the url; change as needed.
 
 ```
-<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.4/bragit.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.5/bragit.js"></script>
 ```
 
 2- Add a labeled button as specified in [Semantic-UI documentation](http://semantic-ui.com/elements/button.html#labeled).
@@ -260,7 +260,7 @@ bower i
 - Increase the current release number,
 
 ```bash
-npm run change-version 1.0.4 1.0.5
+npm run change-version 1.0.5 1.0.6
 ```
 
 Notice that, the the first parameter is the current release followed by the new version number,
@@ -294,7 +294,7 @@ Browse to [Rawgit](http://rawgit.com),
 Publish a tagged version of `dist/bragit.js` bundle, for example
 
 ```
-https://github.com/websemantics/bragit/blob/1.0.4/dist/bragit.js
+https://github.com/websemantics/bragit/blob/1.0.5/dist/bragit.js
 ```
 
 

@@ -65,7 +65,7 @@
        <i class="{{icon}} icon"></i> {{label}}\
    </a>',
     include: '<!-- Include this tag in document head or before close body element -->\
-   <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.4/dist/bragit.js"></script>\
+   <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.5/dist/bragit.js"></script>\
    {{newline}}\
    <!-- Insert the html fragment where you want to show Bragit buttons -->\
    ',
