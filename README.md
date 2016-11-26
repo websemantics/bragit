@@ -13,7 +13,7 @@
 
 1- Include the following script in a web page. Notice the release number `1.0.6` in the url; change as needed.
 
-```
+```html
 <script type="text/javascript" src="https://cdn.rawgit.com/websemantics/bragit/1.0.6/bragit.js"></script>
 ```
 
@@ -21,7 +21,7 @@
 
 3- Add a custom class name for the Github button you desire following a basic convention **`github-{username}-{repo}-{action}`** where action can be, **stars**, **forks**, **watchers**, **issues**, **download** or **contributors**.
 
-```
+```html
 <a class="ui labeled tiny button github-websemantics-bragit-stars">
   <div class="ui brand tiny button">
     <i class="star icon"></i> Stars
@@ -56,7 +56,7 @@ The code will automatically inject the css files that contain the styles of thre
 
 This can be overridden if required as follows
 
-```
+```html
 <script type="text/javascript">
 
   Bragit.defaults({ css: {
@@ -79,7 +79,7 @@ As explained above, **Bragit** detects the existence of a unique css class name 
 
 However, should the need arise, this can be changed as follows,
 
-```
+```html
 <script type="text/javascript">
 
   Bragit.defaults({
@@ -97,7 +97,7 @@ By changing the delimiter to say `_` and the class name **cls** to `brag`, the c
 
 **Bragit** supports a number of `actions` or `action buttons`, **stars**, **forks**, **watchers**, **issues**, **download** and **contributors**. These can be re-configured or more actions added through the `defaults` function,
 
-```
+```html
 <script type="text/javascript">
 
   Bragit.defaults({
@@ -138,7 +138,7 @@ For example, using `stargazers_count` as an index to the repository data will re
 
 Semantic-UI [labeled buttons](http://semantic-ui.com/elements/button.html#labeled) come in all [colors](http://semantic-ui.com/usage/theming.html#using-themes) and [sizes](http://semantic-ui.com/elements/button.html#size). However we all need to customize styles to our needs sometimes. Here's a quick example of a new color named `brand` which is used in this project, **Bragit** to re-theme Github buttons as shown [here](http://websemantics.github.io/bragit/).
 
-```
+```css
 /* styles for github action buttons */
 .ui.brand.button, .ui.brand.buttons .button {
     background-color: #756c74;
@@ -169,7 +169,7 @@ Semantic-UI [labeled buttons](http://semantic-ui.com/elements/button.html#labele
 
 All you need to do is to replace the main color `#756c74` and its lighter shade `#9d959c` to your own. Also notice how the `stars` icon has been colored golden. You can easily change that or even the colors of the other icons (`fork` for forks, `eye` for watchers, `info circle` for issues, `download` for download and `users` for contributors). The following is the code to display all the supports Github actions by **Bragit**.
 
-```
+```html
 <!-- ************************( Stars )********************************-->
 
 <a class="ui labeled tiny button github-websemantics-bragit-stars">
@@ -293,7 +293,7 @@ Browse to [Rawgit](http://rawgit.com),
 
 Publish a tagged version of `dist/bragit.js` bundle, for example
 
-```
+```html
 https://github.com/websemantics/bragit/blob/1.0.6/dist/bragit.js
 ```
 
